@@ -1,0 +1,33 @@
+.fieldForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jea-gap-m);
+  align-items: center;
+  justify-content: center;
+}
+
+.fieldForm > input {
+  border: 2px solid var(--jea-color-primary);
+  border-radius: var(--jea-radius-secundary);
+  padding: var(--jea-padding-s);
+  width: 30svw;
+}
+
+.fieldForm > label {
+  font-size: var(--jea-font-l);
+  font-weight: 600;
+  color: #515151;
+}
+
+@media (max-width: 900px) {
+  .fieldForm {
+    gap: var(--jea-gap-s);
+  }
+  .fieldForm > label {
+    font-size: var(--jea-font-m);
+  }
+  .fieldForm > input {
+    min-width: 180px;
+    padding: var(--jea-padding-xs);
+  }
+}

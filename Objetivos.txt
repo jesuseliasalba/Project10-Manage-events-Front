@@ -1,0 +1,4 @@
+- Usar el controlador de ordenar de mas cercano a mas proximo el evento
+- Dentro de cada evento, que salga la lista de usuarios que asisten 
+    · ademas que pueda añadirse o quitarse de asistir el usuario
+- Que los usuarios logeados vean opciones adicionales

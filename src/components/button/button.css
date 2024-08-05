@@ -1,0 +1,35 @@
+.main-button {
+  font-size: var(--jea-font-l);
+  border-radius: var(--jea-radius-buttons);
+  padding: var(--jea-padding-xs) var(--jea-padding-m);
+  border: none;
+  background-color: var(--jea-color-primary);
+  color: var(--jea-color-secundary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button i {
+  font-size: 25px;
+}
+
+.fa-circle-notch {
+  animation-name: animate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 900px) {
+  .main-button {
+    font-size: var(--jea-font-m);
+  }
+}

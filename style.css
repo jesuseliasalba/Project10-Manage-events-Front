@@ -1,0 +1,73 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  font-family: roboto;
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--jea-color-bg);
+}
+
+:root {
+  /* COLORS */
+  --jea-color-primary: #ffcb03;
+  --jea-color-secundary: #094068;
+  --jea-color-white: white;
+  --jea-color-black: black;
+  --jea-color-bg: #f8f8fa;
+  --jea-color-grey: #687c94;
+  --jea-color-lightblue: #27a5ee;
+  --jea-color-navyblue: #1276b0;
+
+  /* FONT SIZES */
+  --jea-font-xl: 36px;
+  --jea-font-h2: 32px;
+  --jea-font-l: 20px;
+  --jea-font-m: 16px;
+  --jea-font-s: 12px;
+  --jea-font-xs: 10px;
+
+  /* SPACINGS */
+
+  /* RADIUS */
+  --jea-radius-primary: 20px;
+  --jea-radius-secundary: 10px;
+  --jea-radius-buttons: 5px;
+
+  /* PADDING */
+  --jea-padding-xs: 5px;
+  --jea-padding-s: 10px;
+  --jea-padding-m: 20px;
+  --jea-padding-l: 40px;
+  --jea-padding-xl: 50px;
+
+  /* MARGIN */
+  --jea-margin-s: 10px;
+  --jea-margin-m: 20px;
+  --jea-margin-l: 30px;
+  --jea-margin-xl: 40px;
+
+  /* GAP */
+  --jea-gap-s: 5px;
+  --jea-gap-m: 10px;
+  --jea-gap-l: 15px;
+  --jea-gap-xl: 25px;
+}

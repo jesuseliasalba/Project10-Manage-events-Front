@@ -1,0 +1,40 @@
+header {
+  height: 8svh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: var(--jea-padding-m);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--jea-color-primary);
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--jea-gap-l);
+}
+
+header a {
+  font-size: var(--jea-font-l);
+  font-weight: 800;
+  color: var(--jea-color-secundary);
+}
+
+.logoBusiness {
+  height: 6svh;
+}
+
+.profile {
+  height: 6svh;
+  width: 6svh;
+  border: 2px solid var(--jea-color-secundary);
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
