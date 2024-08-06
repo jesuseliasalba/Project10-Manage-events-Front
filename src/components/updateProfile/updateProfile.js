@@ -5,6 +5,7 @@ import { createForm } from "../form/form";
 import "./updateProfile.css";
 
 export const updateProfile = (parent) => {
+  parent.innerHTML = "";
   const form = createForm("updateForm");
   form.innerHTML = `
     ${fieldForm({ labelText: "Usuario", required: false })}

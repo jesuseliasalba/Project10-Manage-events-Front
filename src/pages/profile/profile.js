@@ -1,10 +1,10 @@
 import { Header } from "../../components/header/header";
-import { updateProfile } from "../../components/updateProfile/updateProfile";
+import { showProfile } from "../../components/showProfile/showProfile";
 import { CreatePage } from "../../utils/functions/createPage";
 import "./profile.css";
 
 export const Profile = () => {
   Header();
   const div = CreatePage("profile");
-  updateProfile(div);
+  showProfile(div);
 };

@@ -1,0 +1,34 @@
+.profileCard {
+  width: 400px;
+  height: 600px;
+  background-color: var(--jea-color-primary);
+  border-radius: var(--jea-radius-primary);
+}
+
+.divImgProfile {
+  width: 100%;
+  height: 40%;
+}
+
+.divImgProfile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--jea-radius-primary);
+}
+
+.updateUserButton {
+  background-color: var(--jea-color-secundary);
+  color: var(--jea-color-white);
+}
+
+.ProfileData > h4 {
+  color: var(--jea-color-secundary);
+}
+
+.ProfileData > h2 {
+  font-size: var(--jea-font-xl);
+  color: var(--jea-color-secundary);
+  font-weight: 700;
+  text-align: center;
+}
