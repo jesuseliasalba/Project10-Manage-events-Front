@@ -40,3 +40,13 @@ h1 > span {
   border-radius: var(--jea-radius-primary);
   border: 3px solid var(--jea-color-primary);
 }
+
+@media (max-width: 875px) {
+  .homeLeftDiv {
+    width: 100%;
+    height: 100%;
+  }
+  .homeRightDiv {
+    width: 100%;
+  }
+}
