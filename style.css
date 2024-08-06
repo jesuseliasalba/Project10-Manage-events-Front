@@ -39,11 +39,12 @@ body {
 
   /* FONT SIZES */
   --jea-font-xl: 36px;
-  --jea-font-h2: 32px;
   --jea-font-l: 20px;
   --jea-font-m: 16px;
   --jea-font-s: 12px;
   --jea-font-xs: 10px;
+  --jea-font-h2: 32px;
+  --jea-font-h1: 70px;
 
   /* SPACINGS */
 

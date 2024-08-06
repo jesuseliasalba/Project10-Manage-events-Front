@@ -2,7 +2,7 @@ import { routes } from "../../utils/routes/routes";
 import { createDiv } from "../../utils/functions/createDiv";
 import { createImg } from "../../utils/functions/createImg";
 import { navigate } from "../../utils/functions/navigate";
-import { userProfile_Login } from "../../utils/functions/userProfile-Login";
+import { userProfile_Login } from "../userProfile-Login/userProfile-Login";
 import "./header.css";
 
 export const Header = async () => {

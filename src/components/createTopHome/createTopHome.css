@@ -1,0 +1,42 @@
+.homeLeftDiv {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h1 > span {
+  font-size: var(--jea-font-h1);
+  color: var(--jea-color-secundary);
+  font-weight: 700;
+  text-shadow: 0px 0px 5px white;
+}
+
+h1 > span {
+  color: var(--jea-color-primary);
+}
+
+.homeLeftDiv > p {
+  padding-top: var(--jea-padding-s);
+  color: var(--jea-color-primary);
+  width: 70%;
+}
+
+.homeRightDiv {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoHero {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  border-radius: var(--jea-radius-primary);
+  border: 3px solid var(--jea-color-primary);
+}
