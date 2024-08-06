@@ -1,4 +1,4 @@
-- Usar el controlador de ordenar de mas cercano a mas proximo el evento
 - Dentro de cada evento, que salga la lista de usuarios que asisten 
     · ademas que pueda añadirse o quitarse de asistir el usuario
 - Que los usuarios logeados vean opciones adicionales
+- Dentro de /profile que salga una tarjeta con tus datos y un boton que ponga en ventana el formulario de actualizar

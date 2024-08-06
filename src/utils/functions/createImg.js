@@ -3,5 +3,6 @@ export const createImg = ({ src, alt }) => {
   img.src = src;
   img.alt = alt;
   img.style.height = "100%";
+  img.style.width = "100%";
   return img;
 };
