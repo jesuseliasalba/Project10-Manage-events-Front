@@ -1,13 +1,13 @@
 .profileCard {
-  width: 400px;
-  height: 600px;
+  width: 60svh;
+  height: 80svh;
   background-color: var(--jea-color-primary);
   border-radius: var(--jea-radius-primary);
 }
 
 .divImgProfile {
   width: 100%;
-  height: 40%;
+  height: 50%;
 }
 
 .divImgProfile > img {
@@ -20,15 +20,41 @@
 .updateUserButton {
   background-color: var(--jea-color-secundary);
   color: var(--jea-color-white);
+  margin-top: 2%;
 }
 
-.ProfileData > h4 {
-  color: var(--jea-color-secundary);
+.ProfileData {
+  height: 40%;
+}
+
+.ProfileData * {
+  text-align: start;
+  padding: var(--jea-padding-xs);
+  padding-left: var(--jea-padding-m);
 }
 
 .ProfileData > h2 {
   font-size: var(--jea-font-xl);
   color: var(--jea-color-secundary);
   font-weight: 700;
-  text-align: center;
+  padding-top: var(--jea-padding-m);
+}
+
+.ProfileData > h4 {
+  color: var(--jea-color-secundary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.ProfileData > p {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 875px) {
+  .profileCard {
+    width: 40svh;
+  }
+  .ProfileData > p {
+    font-size: 1rem;
+  }
 }

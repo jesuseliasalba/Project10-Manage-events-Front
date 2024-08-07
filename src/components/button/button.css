@@ -28,7 +28,7 @@ button i {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 875px) {
   .main-button {
     font-size: var(--jea-font-m);
   }
