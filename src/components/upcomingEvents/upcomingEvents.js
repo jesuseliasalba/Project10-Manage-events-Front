@@ -7,9 +7,9 @@ export const upcomingEvents = async (parent) => {
   const div = createDiv("upcomingEvents");
   const events = await API({ endpoint: "/event/near", isJson: true });
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     if (events[i]) {
-      div.append(createCard(events[0]));
+      div.append(createCard(events[i]));
     }
   }
 
