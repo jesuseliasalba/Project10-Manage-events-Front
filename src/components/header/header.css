@@ -10,6 +10,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--jea-color-primary);
+  z-index: 10000000;
 }
 
 header ul {

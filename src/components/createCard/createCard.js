@@ -1,5 +1,7 @@
 import { createDiv } from "../../utils/functions/createDiv";
 import { createImg } from "../../utils/functions/createImg";
+import { Button } from "../button/button";
+import { EventPage } from "../EventPage/EventPage";
 import "./createCard.css";
 
 export const createCard = (event) => {
@@ -21,6 +23,17 @@ export const createCard = (event) => {
 
   eventDiv.append(img);
   eventDiv.append(divContent);
+
+  const ButtonEvent = Button({
+    text: "Mas información",
+
+    fn: (e) => {
+      EventPage({ e, event });
+    },
+    addClass: "ButtonEvent",
+  });
+
+  eventDiv.append(ButtonEvent);
 
   return eventDiv;
 };

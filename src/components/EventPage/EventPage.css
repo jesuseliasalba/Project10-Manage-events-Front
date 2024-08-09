@@ -1,0 +1,111 @@
+.eventShow {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventShowDiv {
+  width: 70%;
+  height: 65%;
+  max-width: 875px;
+  background-color: var(--jea-color-primary);
+  border-radius: var(--jea-radius-primary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+}
+
+.coverDiv {
+  height: 100%;
+  width: 50%;
+}
+
+.coverDiv > img {
+  object-fit: cover;
+}
+
+.infoDiv {
+  height: 100%;
+  width: 50%;
+  padding: var(--jea-padding-l);
+}
+
+.infoDiv * {
+  text-align: start;
+  padding: var(--jea-padding-xs);
+}
+
+.infoDiv > h2 {
+  font-size: 35px;
+  color: var(--jea-color-secundary);
+  font-weight: 700;
+}
+
+.infoDiv > h4 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #225b9f;
+}
+
+.infoDiv > p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.exitButton {
+  position: absolute;
+  cursor: pointer;
+  padding: var(--jea-padding-xs);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  right: 10px;
+  background-color: var(--jea-color-secundary);
+}
+
+.exitButton > i {
+  color: var(--jea-color-primary);
+}
+
+@media screen and (max-width: 875px) {
+  .eventShow {
+    top: 3svh;
+  }
+  .eventShowDiv {
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+  }
+  .coverDiv {
+    height: 30%;
+    width: 100%;
+  }
+  .infoDiv {
+    height: 70%;
+    width: 100%;
+    padding: var(--jea-padding-m);
+  }
+  .infoDiv > h2 {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .infoDiv > h4 {
+    font-size: 22px;
+  }
+  .infoDiv > p {
+    font-size: 16px;
+  }
+}

@@ -1,3 +1,5 @@
 main {
   height: 92svh;
+  position: relative;
+  overflow: scroll;
 }
