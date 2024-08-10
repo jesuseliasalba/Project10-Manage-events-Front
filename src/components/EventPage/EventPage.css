@@ -12,7 +12,7 @@
 
 .eventShowDiv {
   width: 70%;
-  height: 65%;
+  height: 70%;
   max-width: 875px;
   background-color: var(--jea-color-primary);
   border-radius: var(--jea-radius-primary);
@@ -36,10 +36,10 @@
 .infoDiv {
   height: 100%;
   width: 50%;
-  padding: var(--jea-padding-l);
+  padding: var(--jea-padding-m);
 }
 
-.infoDiv * {
+.infoDiv > * {
   text-align: start;
   padding: var(--jea-padding-xs);
 }
@@ -52,7 +52,7 @@
 
 .infoDiv > h4 {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 24px;
   color: #225b9f;
 }
 

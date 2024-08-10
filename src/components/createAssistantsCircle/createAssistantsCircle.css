@@ -1,0 +1,19 @@
+.profileCircle {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid var(--jea-color-secundary);
+  flex: 0 0 auto;
+  margin: 5px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--jea-color-bg);
+}
+
+.profileCircle > i {
+  font-size: 40px;
+  color: var(--jea-color-secundary);
+  cursor: pointer;
+}

@@ -19,6 +19,11 @@ button i {
   animation-iteration-count: infinite;
 }
 
+.opposite {
+  background-color: var(--jea-color-secundary);
+  color: var(--jea-color-primary);
+}
+
 @keyframes animate {
   0% {
     transform: rotate(0turn);

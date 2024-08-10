@@ -1,3 +1,10 @@
 - Dentro de cada evento, que salga la lista de usuarios que asisten 
     · ademas que pueda añadirse o quitarse de asistir el usuario
-- Que los usuarios logeados vean opciones adicionales
+- Los usuarios autenticados verán opciones adicionales para crear eventos y confirmar asistencia
+
+
+actualizacion: 
+ya salen los usuarios que asisten
+PROBLEM: 
+ - como los datos del evento los saco del propio elemento de la carta tenog que recargar la pagina entera para cargar los elementos nuevamente
+ - me falta arreglar que cuando el usuario ya va que en vez de añadirse, se pueda quitar de la lista, que es el mismo boton pero cambiar el <i>

@@ -68,6 +68,7 @@
   inset: auto auto 40px 30px;
   opacity: 0;
   z-index: 2;
+  visibility: hidden;
 }
 
 .event:hover h3 {
@@ -89,4 +90,5 @@
 .event:hover .ButtonEvent {
   opacity: 1;
   transition: all 0.4s 0.1s ease-in;
+  visibility: visible;
 }

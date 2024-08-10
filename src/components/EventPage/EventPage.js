@@ -2,9 +2,12 @@ import { createDiv } from "../../utils/functions/createDiv";
 import { createImg } from "../../utils/functions/createImg";
 import { Button } from "../../components/button/button";
 import "./EventPage.css";
+import { assistants } from "../assistants/assistants";
 
-export const EventPage = (e) => {
+export const EventPage = async (e) => {
   const event = e.event;
+
+  localStorage.setItem("eventSelected", e.event._id);
 
   const eventPage = createDiv("eventShow");
   const eventdiv = createDiv("eventShowDiv");
@@ -29,15 +32,19 @@ export const EventPage = (e) => {
     <p> ${event.description} </p>
     <h4> Fecha: </h4>
     <p> ${Intl.DateTimeFormat("es").format(eventDate)} </p>
+    <h4> Asistentes: </h4>
   `;
+  const assistantsDiv = createDiv("assistants");
+  await assistants({ parent: assistantsDiv, users: event.assistants });
 
-  infoDiv.append();
+  infoDiv.append(assistantsDiv);
 
   const exitButton = createDiv("exitButton");
   exitButton.innerHTML = `
   <i class="fas fa-times fa-s" aria-hidden="true"></i>
   `;
   exitButton.addEventListener("click", () => {
+    localStorage.removeItem("eventSelected");
     eventPage.remove();
   });
 
