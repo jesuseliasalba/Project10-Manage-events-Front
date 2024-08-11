@@ -1,0 +1,58 @@
+.blur {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createElement {
+  width: 70%;
+  height: 90%;
+  max-width: 400px;
+  max-height: 70svh;
+  background-color: var(--jea-color-bg);
+  border-radius: var(--jea-radius-primary);
+  border: 4px solid var(--jea-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.createElement > h2 {
+  padding-top: 0 !important;
+  padding-bottom: 20px;
+}
+
+.eventForm {
+  width: 100%;
+}
+
+.eventForm > div {
+  width: 100%;
+}
+
+.eventForm input {
+  width: 70%;
+}
+
+.eventForm input[type="file"] {
+  display: none;
+}
+
+@media screen and (max-width: 875px) {
+  .createElement {
+    max-height: 550px;
+    top: 52%;
+    transform: translate(0, -50%);
+  }
+}

@@ -1,0 +1,18 @@
+.exitButton {
+  position: absolute;
+  cursor: pointer;
+  padding: var(--jea-padding-xs);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  right: 10px;
+  background-color: var(--jea-color-secundary);
+}
+
+.exitButton > i {
+  color: var(--jea-color-primary);
+}

@@ -5,6 +5,8 @@ import { API } from "../../utils/API/API";
 import "./EventPage.css";
 import { updateEvent } from "../updateEvent/updateEvent";
 import { showEventImg } from "../showEventImg/showEventImg";
+import { exitButton } from "../exitButton/exitButton";
+import { deleteEvent } from "../../utils/functions/deleteEvent";
 
 export const EventPage = async (id) => {
   const event = await API({ endpoint: `/event/${id}` });
@@ -21,7 +23,7 @@ export const EventPage = async (id) => {
 
   const zoomCover = createDiv("zoomCover");
   zoomCover.innerHTML = `
-  <i class="fa-solid fa-magnifying-glass"></i>
+  <i class="fa-solid fa-expand"></i>
   `;
   zoomCover.addEventListener("click", () => {
     showEventImg(event);
@@ -51,19 +53,15 @@ export const EventPage = async (id) => {
 
   infoDiv.append(assistantsDiv);
 
-  const exitButton = createDiv("exitButton");
-  exitButton.innerHTML = `
-  <i class="fas fa-times fa-s" aria-hidden="true"></i>
-  `;
-  exitButton.addEventListener("click", () => {
-    localStorage.removeItem("idEvent");
-    eventPage.remove();
+  const exit = exitButton({
+    divRemove: eventPage,
+    removeLocal: "idEvent",
   });
 
   eventdiv.append(coverDiv);
   eventdiv.append(infoDiv);
 
-  eventdiv.append(exitButton);
+  eventdiv.append(exit);
 
   eventPage.append(eventdiv);
   document.querySelector("main").append(eventPage);
@@ -77,6 +75,15 @@ export const EventPage = async (id) => {
       updateEvent({ parent: infoDiv, event });
     });
     eventdiv.append(modifyEvent);
+
+    const deleteE = createDiv("deleteEvent");
+    deleteE.innerHTML = `
+    <p>Eliminar</p>
+  `;
+    deleteE.addEventListener("click", () => {
+      deleteEvent(id);
+    });
+    eventdiv.append(deleteE);
   }
 
   if (document.querySelectorAll(".eventShow").length > 1) {

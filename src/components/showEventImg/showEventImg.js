@@ -12,7 +12,7 @@ export const showEventImg = (event) => {
 
   const exitZoom = createDiv("exitZoom");
   exitZoom.innerHTML = `
-  <i class="fa-solid fa-angle-up"></i>
+    <i class="fa-solid fa-compress"></i>
   `;
   exitZoom.addEventListener("click", () => {
     div.remove();
