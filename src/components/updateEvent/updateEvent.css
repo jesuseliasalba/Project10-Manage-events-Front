@@ -17,3 +17,12 @@
 .eventShow input[type="file"] {
   display: none;
 }
+
+.fieldForm > textarea {
+  border: 2px solid var(--jea-color-primary);
+  border-radius: var(--jea-radius-secundary);
+  padding: var(--jea-padding-s);
+  width: 70%;
+  font-size: 0.9rem;
+  resize: none;
+}

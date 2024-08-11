@@ -1,3 +1,5 @@
+import { EventPage } from "../../components/EventPage/EventPage";
+import { Events } from "../../pages/events/events";
 import { API } from "../API/API";
 
 export const updateEventFunction = async ({ e, button }) => {
@@ -15,11 +17,47 @@ export const updateEventFunction = async ({ e, button }) => {
   img.value ? formData.append("img", img.value) : null;
 
   const res = await API({
-    enpoint: `/event/${localStorage.getItem("idEvent")}`,
+    endpoint: `/event/${localStorage.getItem("idEvent")}`,
     method: "PUT",
     body: formData,
     token: localStorage.getItem("token"),
   });
 
-  console.log(res);
+  if (typeof res === "object") {
+    Events();
+    EventPage(localStorage.getItem("idEvent"));
+    Swal.fire({
+      position: "center",
+      title: "Evento actualizado",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 1500,
+      width: "30%",
+      customClass: "swal-responsive",
+    });
+  } else if (typeof res === "string") {
+    button.innerHTML = "ACTUALIZAR";
+    Swal.fire({
+      position: "center",
+      title: "Oops...",
+      text: res,
+      icon: "error",
+      showConfirmButton: false,
+      timer: 1500,
+      width: "30%",
+      customClass: "swal-responsive",
+    });
+  } else {
+    Home();
+    Swal.fire({
+      position: "center",
+      title: "Oops...",
+      text: "Ha ocurrido un error, contacta con un administrador",
+      icon: "error",
+      showConfirmButton: false,
+      timer: 1500,
+      width: "30%",
+      customClass: "swal-responsive",
+    });
+  }
 };

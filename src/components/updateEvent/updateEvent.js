@@ -5,7 +5,7 @@ import { fieldForm } from "../fieldForm/fieldForm";
 import { createForm } from "../form/form";
 import "./updateEvent.css";
 
-export const updateEvent = (parent) => {
+export const updateEvent = ({ parent, event }) => {
   parent.innerHTML = ``;
   parent.style.backgroundColor = "var(--jea-color-bg)";
   parent.style.border = "2px solid var(--jea-color-primary)";
@@ -15,18 +15,34 @@ export const updateEvent = (parent) => {
 
   const div = createDiv("eventFormDiv");
   const form = createForm("eventForm");
+
+  const eventDate = new Date(event.date);
+
   form.innerHTML = `
-    ${fieldForm({ labelText: "Título", required: false })}
     ${fieldForm({
-      labelText: "Fecha",
-      type: "date",
+      labelText: "Título",
       required: false,
+      placeholder: event.title,
     })}
-    ${fieldForm({ labelText: "Ubicación", required: false })}
-    ${fieldForm({ labelText: "Descripción", required: false })}
     <div class="fieldForm">
-            <label for="profileImage" class="customFileUpload"> <i class="fa-solid fa-upload"></i> <span>Imagen de perfil</span></label>
-            <input type="file" id="profileImage"/>
+        <label>Fecha</label>
+        <input type="text" placeholder="${Intl.DateTimeFormat("es").format(
+          eventDate
+        )}" onfocus="(this.type='date')"
+      onblur="(this.type='text')" >
+    </div>
+    ${fieldForm({
+      labelText: "Ubicación",
+      required: false,
+      placeholder: event.ubication,
+    })}
+    <div class="fieldForm">
+        <label> Descripción </label>
+        <textarea placeholder="${event.description}"  rows="6"></textarea>
+    </div>
+    <div class="fieldForm">
+        <label for="profileImage" class="customFileUpload"> <i class="fa-solid fa-upload"></i> <span>Imagen de perfil</span></label>
+        <input type="file" id="profileImage"/>
     </div>
   `;
 

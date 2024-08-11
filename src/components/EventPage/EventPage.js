@@ -4,6 +4,7 @@ import { assistants } from "../assistants/assistants";
 import { API } from "../../utils/API/API";
 import "./EventPage.css";
 import { updateEvent } from "../updateEvent/updateEvent";
+import { showEventImg } from "../showEventImg/showEventImg";
 
 export const EventPage = async (id) => {
   const event = await API({ endpoint: `/event/${id}` });
@@ -17,6 +18,16 @@ export const EventPage = async (id) => {
     src: event.img,
     alt: `Portada de ${event.title}`,
   });
+
+  const zoomCover = createDiv("zoomCover");
+  zoomCover.innerHTML = `
+  <i class="fa-solid fa-magnifying-glass"></i>
+  `;
+  zoomCover.addEventListener("click", () => {
+    showEventImg(event);
+  });
+
+  coverDiv.append(zoomCover);
 
   coverDiv.append(cover);
 
@@ -63,7 +74,7 @@ export const EventPage = async (id) => {
     <p>Modificar</p>
   `;
     modifyEvent.addEventListener("click", () => {
-      updateEvent(infoDiv);
+      updateEvent({ parent: infoDiv, event });
     });
     eventdiv.append(modifyEvent);
   }
