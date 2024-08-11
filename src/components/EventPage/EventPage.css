@@ -16,7 +16,6 @@
   max-width: 875px;
   background-color: var(--jea-color-primary);
   border-radius: var(--jea-radius-primary);
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +26,9 @@
 .coverDiv {
   height: 100%;
   width: 50%;
+  border-top-left-radius: var(--jea-radius-primary);
+  border-bottom-left-radius: var(--jea-radius-primary);
+  overflow: hidden;
 }
 
 .coverDiv > img {
@@ -37,6 +39,7 @@
   height: 100%;
   width: 50%;
   padding: var(--jea-padding-m);
+  overflow-y: scroll;
 }
 
 .infoDiv > * {
@@ -80,6 +83,29 @@
   color: var(--jea-color-primary);
 }
 
+.modifyEvent {
+  position: absolute;
+  cursor: pointer;
+  right: -65px;
+  top: 100px;
+  width: 100px;
+  height: 30px;
+  rotate: 90deg;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--jea-color-black);
+  border-top-left-radius: var(--jea-radius-secundary);
+  border-top-right-radius: var(--jea-radius-secundary);
+}
+
+.modifyEvent > p {
+  color: var(--jea-color-white);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
 @media screen and (max-width: 875px) {
   .eventShow {
     top: 3svh;
@@ -92,6 +118,9 @@
   .coverDiv {
     height: 30%;
     width: 100%;
+    border-top-left-radius: var(--jea-radius-primary);
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--jea-radius-primary);
   }
   .infoDiv {
     height: 70%;
@@ -107,5 +136,10 @@
   }
   .infoDiv > p {
     font-size: 16px;
+  }
+  .modifyEvent {
+    right: -65px;
+    bottom: 100px;
+    top: auto;
   }
 }

@@ -28,7 +28,7 @@ export const createCard = (event) => {
     text: "Mas información",
 
     fn: (e) => {
-      EventPage({ e, event });
+      EventPage(event._id);
     },
     addClass: "ButtonEvent",
   });

@@ -1,31 +1,44 @@
+import { API } from "../../utils/API/API";
 import { createDiv } from "../../utils/functions/createDiv";
 import { createImg } from "../../utils/functions/createImg";
-import { userProfile } from "../../components/userProfile/userProfile";
-import "./createAssistantsCircle.css";
-import { API } from "../../utils/API/API";
 import { EventPage } from "../EventPage/EventPage";
-import { Events } from "../../pages/events/events";
+import { userProfile } from "../userProfile/userProfile";
+import "./createAssistantsCircle.css";
 
-export const createAssistantsCircle = async ({ user, join = false }) => {
+export const createAssistantsCircle = async ({
+  user,
+  users = [],
+  join = false,
+}) => {
   const divuser = createDiv("profileCircle");
   const id = await userProfile();
 
   if (join && id) {
-    divuser.innerHTML = `
-    <i class="fa-solid fa-plus"></i>
-    `;
+    if (users.some((object) => object._id === id._id)) {
+      divuser.innerHTML = `
+        <i class="fa-solid fa-minus"></i>
+      `;
+    } else {
+      divuser.innerHTML = `
+        <i class="fa-solid fa-plus"></i>    
+      `;
+    }
+
     divuser.addEventListener("click", async () => {
-      const res = await API({
-        endpoint: `/event/join/${localStorage.getItem("eventSelected")}`,
+      await API({
+        endpoint: `/event/join/${localStorage.getItem("idEvent")}`,
         method: "PUT",
         token: localStorage.getItem("token"),
       });
-      Events();
+      EventPage(localStorage.getItem("idEvent"));
     });
     return divuser;
   } else if (join) {
     return null;
   } else {
+    if (user._id === id._id) {
+      divuser.classList.add("userProfile");
+    }
     divuser.append(
       createImg({ src: user.img, alt: `Foto de ${user.name} ${user.surname}` })
     );

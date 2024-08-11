@@ -21,11 +21,10 @@ export const updateProfile = (parent) => {
       type: "email",
       required: false,
     })}
-    ${fieldForm({
-      labelText: "Imagen de perfil",
-      type: "file",
-      required: false,
-    })}
+    <div class="fieldForm">
+            <label for="profileImage" class="customFileUpload"> <i class="fa-solid fa-upload"></i> <span>Imagen de perfil</span></label>
+            <input type="file" id="profileImage"/>
+    </div>
   `;
   const updateButton = Button({
     text: "ACTUALIZAR",

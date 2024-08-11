@@ -7,4 +7,11 @@
   align-items: center;
   flex-direction: row;
   gap: 5px;
+  padding-top: 0;
+}
+
+@media screen and (max-width: 875px) {
+  .assistants {
+    height: 80px;
+  }
 }

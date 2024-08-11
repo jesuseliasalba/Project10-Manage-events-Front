@@ -13,7 +13,22 @@
 }
 
 .profileCircle > i {
-  font-size: 40px;
+  font-size: 35px;
   color: var(--jea-color-secundary);
   cursor: pointer;
+}
+
+.userProfile {
+  border: 3px solid red;
+  animation: loopUser 2s infinite ease-in-out;
+}
+
+@keyframes loopUser {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }

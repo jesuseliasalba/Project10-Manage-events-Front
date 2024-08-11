@@ -1,3 +1,32 @@
 #profile button {
   margin-top: var(--jea-margin-m);
 }
+
+#profile input[type="file"] {
+  display: none;
+}
+
+.customFileUpload {
+  display: inline-block;
+  padding: var(--jea-padding-s) var(--jea-padding-m);
+  background-color: var(--jea-color-primary);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: var(--jea-margin-s);
+  transition: background-color 0.3s ease;
+}
+
+.customFileUpload > i,
+.customFileUpload > span {
+  color: var(--jea-color-secundary);
+  font-size: var(--jea-font-m);
+  font-weight: 600;
+}
+
+.customFileUpload:hover {
+  background-color: var(--jea-color-secundary);
+}
+.customFileUpload:hover > * {
+  color: var(--jea-color-primary);
+}

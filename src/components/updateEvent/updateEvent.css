@@ -1,0 +1,19 @@
+.eventFormDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventFormDiv .fieldForm,
+.eventFormDiv form {
+  width: 100%;
+}
+
+.eventFormDiv input {
+  width: 70%;
+}
+
+.eventShow input[type="file"] {
+  display: none;
+}

@@ -18,7 +18,10 @@ export const registerForm = (divleft, divright) => {
     ${fieldForm({ labelText: "Nombre" })}
     ${fieldForm({ labelText: "Apellido" })}
     ${fieldForm({ labelText: "Correo electrónico", type: "email" })}
-    ${fieldForm({ labelText: "Imagen de perfil", type: "file" })}
+    <div class="fieldForm">
+            <label for="profileImage" class="customFileUpload"> <i class="fa-solid fa-upload"></i> <span>Imagen de perfil</span></label>
+            <input type="file" required=true id="profileImage"/>
+    </div>
   `;
   const registerButton = Button({
     text: "REGISTRARSE",
