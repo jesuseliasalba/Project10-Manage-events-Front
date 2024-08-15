@@ -66,7 +66,12 @@ export const EventPage = async (id) => {
   eventPage.append(eventdiv);
   document.querySelector("main").append(eventPage);
 
-  if (localStorage.getItem("token")) {
+  const user = await API({
+    endpoint: "/user/me",
+    token: localStorage.getItem("token"),
+  });
+
+  if (user._id === event.creator) {
     const modifyEvent = createDiv("modifyEvent");
     modifyEvent.innerHTML = `
     <p>Modificar</p>
