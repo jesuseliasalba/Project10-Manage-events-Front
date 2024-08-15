@@ -4,7 +4,7 @@
 
 .customFileUpload {
   display: inline-block;
-  padding: var(--jea-padding-s) var(--jea-padding-m);
+  padding: var(--jea-padding-m) var(--jea-padding-l) !important;
   background-color: var(--jea-color-primary);
   border-radius: 5px;
   cursor: pointer;
@@ -12,6 +12,10 @@
   margin-top: var(--jea-margin-s);
   margin-bottom: var(--jea-margin-s);
   transition: background-color 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 .customFileUpload > i,

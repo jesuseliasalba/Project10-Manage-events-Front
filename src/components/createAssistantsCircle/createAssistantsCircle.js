@@ -25,6 +25,10 @@ export const createAssistantsCircle = async ({
     }
 
     divuser.addEventListener("click", async () => {
+      divuser.innerHTML = `
+        <i class="fa-solid fa-circle-notch"></i>
+      `;
+      divuser.querySelector("i").style.fontSize = "25px";
       await API({
         endpoint: `/event/join/${localStorage.getItem("idEvent")}`,
         method: "PUT",

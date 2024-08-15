@@ -2,4 +2,6 @@ main {
   height: 92svh;
   position: relative;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
