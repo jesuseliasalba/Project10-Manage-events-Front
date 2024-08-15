@@ -1,3 +1,4 @@
+import { addBackgroundInput } from "../../utils/functions/addBackgroundInput";
 import { createDiv } from "../../utils/functions/createDiv";
 import { updateEventFunction } from "../../utils/functions/updateEventFunction";
 import { Button } from "../button/button";
@@ -57,4 +58,8 @@ export const updateEvent = ({ parent, event }) => {
 
   div.append(form);
   parent.append(div);
+
+  const eventImageButton = document.querySelector("#profileImage");
+
+  addBackgroundInput(eventImageButton);
 };

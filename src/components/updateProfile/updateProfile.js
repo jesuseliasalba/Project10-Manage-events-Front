@@ -1,3 +1,4 @@
+import { addBackgroundInput } from "../../utils/functions/addBackgroundInput";
 import { updateUser } from "../../utils/functions/updateUser";
 import { Button } from "../button/button";
 import { fieldForm } from "../fieldForm/fieldForm";
@@ -35,4 +36,8 @@ export const updateProfile = (parent) => {
   });
 
   parent.append(form);
+
+  const profileImageButton = document.querySelector("#profileImage");
+
+  addBackgroundInput(profileImageButton);
 };

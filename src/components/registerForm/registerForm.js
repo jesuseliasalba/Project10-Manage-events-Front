@@ -1,3 +1,4 @@
+import { addBackgroundInput } from "../../utils/functions/addBackgroundInput";
 import { registerUser } from "../../utils/functions/registerUser";
 import { Button } from "../button/button";
 import { fieldForm } from "../fieldForm/fieldForm";
@@ -48,19 +49,5 @@ export const registerForm = (divleft, divright) => {
 
   const profileImageButton = document.querySelector("#profileImage");
 
-  profileImageButton.addEventListener("change", (e) => {
-    const file = e.target.files[0];
-
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onload = (e) => {
-        document.querySelector(
-          "label.customFileUpload"
-        ).style.backgroundImage = `url(${e.target.result})`;
-      };
-
-      reader.readAsDataURL(file);
-    }
-  });
+  addBackgroundInput(profileImageButton);
 };
